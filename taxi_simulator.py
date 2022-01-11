@@ -18,3 +18,9 @@ def main():
     while choice != "q":
         if choice == "c":
             print("Taxis available: ")
+            display_taxis(taxis)
+            taxi_choice = int(input("Choose taxi: "))
+            try:
+                current_taxi = taxis[taxi_choice]
+            except IndexError:
+                print("Invalid taxi choice")
