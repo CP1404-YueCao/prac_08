@@ -36,3 +36,5 @@ def main():
                 total_bill += cost
             else:
                 print("You need to choose a taxi before you can drive")
+        else:
+            print("Invalid option")
