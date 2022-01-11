@@ -26,3 +26,12 @@ def main():
             except IndexError:
                 print("Invalid taxi choice")
         elif choice == "d":
+            if current_taxi:
+                current_taxi.start_fare()
+                drive_distance = int(input("Drive how far? "))
+                current_taxi.drive(drive_distance)
+                cost = current_taxi.get_fare()
+                print(f"Your {current_taxi.name} cost you ${cost:.2f}")
+                total_bill += cost
+            else:
+                print("You need to choose a taxi before you can drive")
