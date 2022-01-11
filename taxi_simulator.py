@@ -13,6 +13,7 @@ def main():
        At the end of each trip, show them the trip cost and add it to their bill"""
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     current_taxi = None
+    total_bill = 0
     print("Let's drive!")
     print(MENU)
     choice = input(">>> ").lower()
