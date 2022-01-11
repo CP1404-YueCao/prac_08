@@ -12,6 +12,7 @@ def main():
        They can choose how far they want to drive
        At the end of each trip, show them the trip cost and add it to their bill"""
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
+    current_taxi = None
     print("Let's drive!")
     print(MENU)
     choice = input(">>> ").lower()
@@ -24,3 +25,4 @@ def main():
                 current_taxi = taxis[taxi_choice]
             except IndexError:
                 print("Invalid taxi choice")
+        elif choice == "d":
